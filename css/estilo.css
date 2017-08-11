@@ -1,0 +1,34 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f6f9fb;
+}
+nav{
+    width: 200px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 99;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #263238;
+    color: #fff;
+
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav ul li{
+    padding: 10px;
+}
+
+.conteudo{
+    position: relative;
+    left: 200px;
+    width: calc(100% - 200px);
+    box-sizing: border-box;
+    padding: 20px;
+}
