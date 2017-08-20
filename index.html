@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma de curso">
-    <meta name="keywords" content="HTML,CSS,JS">
-    <meta name="author" content="Guilherme Cruz">
-    <title>Plataforma de Curso</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    
-</head>
-<body>
-    <nav id="nav">
-        <ul>
-            <li v-for="item in itens">
-                {{ item.texto }}
-            </li> 
-        </ul>
-    </nav>
-    <aside class="conteudo" id="conteudo">
-            <p v-for="item in itens">
-                {{ item.texto }}
-            </p>
-    </aside>
-    <script src="js/dist/vue.js"></script>
-    <script src="js/dist/vue-router.js"></script>
-    <script src="js/app.js"></script>
-
-    
-</body>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Plataforma de curso">
+      <meta name="keywords" content="HTML,CSS,JS">
+      <meta name="author" content="Guilherme Cruz">
+      <title>Plataforma de Curso</title>
+      <link rel="stylesheet" href="css/estilo.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+  </body>
 </html>
