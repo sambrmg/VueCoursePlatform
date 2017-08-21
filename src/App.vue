@@ -1,31 +1,29 @@
 <template>
   <div>
-    <nav id="nav">
-        <ul>
-            <li v-for="item in itens">
-                {{ item.texto }}
-            </li> 
-        </ul>
-    </nav>
+    <meu-menu :rotas="routes"/>
+    <router-view class="conteudo"></router-view>
   </div>
 </template>
 
 <script>
+import { routes } from './routes';
+import Menu from './components/shared/menu/Menu.vue';
+
 export default {
-  data(){
-    return{
-      itens: [
-        {
-          texto: "item 1", 
-        },
-        {
-          texto: "item 2", 
-        }
-      ]
+
+  components: {
+    'meu-menu' : Menu
+  },
+  
+  data() {
+
+    return {
+
+      routes
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style>
 </style>
