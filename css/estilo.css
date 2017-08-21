@@ -34,8 +34,9 @@ nav ul li:hover{
     left: 244px;
     width: calc(100% - 280px);
     box-sizing: border-box;
-    margin: 20px;
+    margin-top: 0px;
     border: 1px solid #c8c8c8;
+    border-top: 0px;
     padding: 10px 25px;
     background-color: white;
     box-shadow: 0 0 7px 0px rgba(0,0,0,0.2);
