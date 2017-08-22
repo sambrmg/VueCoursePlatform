@@ -1,25 +1,8 @@
 <template>
     <ol class="answer">
-        <li>
-            <span class="item"></span>
-            <span class="alternative">resposta 1</span>
-            <div class="clearfix"></div>
-        </li>
-        <li>
-            <span class="item"></span>
-            <span class="alternative">resposta 1</span>
-            <div class="clearfix"></div>
-        </li>
-        <li>
-            <span class="item"></span>
-            <span class="alternative">resposta 1</span>
-            <div class="clearfix"></div>
-        </li>
-        <li>
-            <span class="item"></span>
-            <span class="alternative">resposta 1</span>
-            <div class="clearfix"></div>
-        </li>
+        <li>Resposta 1</li>
+        <li>Resposta 2</li>
+        <li>Resposta 3</li>
     </ol>
 </template>
 <script>
@@ -30,26 +13,26 @@ export default {
 <style >
     .answer{
         list-style: none;
+        margin: 0;
         padding: 0;
     }
-    .answer li{
-        counter-increment: index;
+    .answer li {
+        padding: 10px 10px 10px 40px;
+        border: 2px solid #dedede;
         margin-bottom: 10px;
+        counter-increment: index;
+        position: relative;	
+        color: #757575;		
     }
-    .answer li .item{
-        display: inline-block;
-        background-color: #84c6fe;
+    .answer li:before {
+        content: counter(index,upper-latin);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        bottom: -2px;
+        padding: 7px 10px 10px 10px;
+        background-color: #74a8e3;
         color: white;
-        text-align: center;
-        float: left;
-        width: 55px;
-        height: 100%;
-
-    }
-    .answer li .item:before{
-        content: counter(index,upper-latin)" ";
-    }
-    .answer li .alternative{
-        float: left;
+        font-size: 23px;
     }
 </style>
