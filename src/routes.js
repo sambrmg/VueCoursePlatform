@@ -1,7 +1,7 @@
-import HomeDois from './components/homedois/HomeDois.vue';
-import Home from './components/home/Home.vue';
+import ChapterOne from './components/chapter/ChapterOne.vue';
+import ChapterTwo from './components/chapter/ChapterTwo.vue';
 
 export const routes = [
-    { path: '/home', component: Home, titulo: 'Home'},
-    { path: '/homedois', component: HomeDois, titulo: 'Home Dois'}
+    { path: '/chapterone', component: ChapterOne, titulo: 'Chapter One'},
+    { path: '/chaptertwo', component: ChapterTwo, titulo: 'Chapter Two'}
 ];

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <meu-menu :rotas="routes"/>
-    <router-view class="conteudo"></router-view>
+    <main-menu :rotas="routes"/>
+    <router-view class="content"></router-view>
   </div>
 </template>
 
@@ -12,18 +12,15 @@ import Menu from './components/shared/menu/Menu.vue';
 export default {
 
   components: {
-    'meu-menu' : Menu
+    'main-menu' : Menu
   },
   
   data() {
-
     return {
-
       routes
     }
   }
 }
 </script>
 
-<style>
-</style>
+<style></style>

@@ -13,9 +13,7 @@
 <script>
 
 export default {
-
     props: {
-
         rotas: {
             type: Array,
             required: true

@@ -1,8 +1,8 @@
 <template>
     <ol class="answer">
-        <li>Resposta 1</li>
-        <li>Resposta 2</li>
-        <li>Resposta 3</li>
+        <li>Answer 1</li>
+        <li>Answer 2</li>
+        <li>Answer 3</li>
     </ol>
 </template>
 <script>

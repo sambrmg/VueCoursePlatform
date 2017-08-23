@@ -7,7 +7,6 @@ nav{
     position: fixed;
     top: 0px;
     left: 0px;
-
     bottom: 0px;
     z-index: 99;
     overflow-y: auto;
@@ -29,7 +28,7 @@ nav ul li{
 nav ul li:hover{
     background-color: rgba(161,161,161,.09);
 }
-.conteudo{
+.content{
     position: relative;
     left: 244px;
     width: calc(100% - 280px);
@@ -40,7 +39,6 @@ nav ul li:hover{
     padding: 10px 25px;
     background-color: white;
     box-shadow: 0 0 7px 0px rgba(0,0,0,0.2);
-
 }
 .clearfix{
     clear: both;
