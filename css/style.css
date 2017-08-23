@@ -2,6 +2,26 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #ededed;
 }
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #eee;
+}
+
+h3, b, strong {
+    color: #f25d00;
+}
+
+code {
+    padding: 2px 5px;
+    font-size: 90%;
+    color: #f25d00;
+    background-color: #ececff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
 nav{
     width: 230px;
     position: fixed;
