@@ -1,6 +1,5 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #ededed;
 }
 
 blockquote {
@@ -23,7 +22,7 @@ code {
 }
 
 nav{
-    width: 230px;
+    width: 260px;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -31,9 +30,8 @@ nav{
     z-index: 99;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: white;
+    background-color: #383e4b;
     color: black;
-    box-shadow: 0 0 7px 0px rgba(0,0,0,0.2);
 }
 nav ul {
     list-style: none;
@@ -41,24 +39,36 @@ nav ul {
     padding: 0;
 
 }
-nav ul li{
+nav ul li a i{
+    margin-right: 10px;
+    color: white;
+    font-size: 17px;
+    position: relative;
+    top: 3px;
+    font-weight: bold !important;
+}
+nav ul li a i.done{
+    color: #90db73;
+}
+nav ul li a{
     padding: 15px 10px;
-    cursor: pointer;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
 }
-nav ul li:hover{
-    background-color: rgba(161,161,161,.09);
+nav ul li a:hover{
+    background-color: #22262e;
 }
+
 .content{
     position: relative;
-    left: 244px;
-    width: calc(100% - 280px);
+    left: 260px;
+    width: calc(100% - 260px);
     box-sizing: border-box;
     margin-top: 0px;
-    border: 1px solid #c8c8c8;
     border-top: 0px;
-    padding: 10px 25px;
-    background-color: white;
-    box-shadow: 0 0 7px 0px rgba(0,0,0,0.2);
+    padding: 10px 50px;
 }
 .clearfix{
     clear: both;

@@ -3,7 +3,8 @@
       <ul>       
           <li v-for="rota in rotas">
             <router-link :to="rota.path ? rota.path : '/'">
-              {{ rota.titulo }}
+                <i class="icon-book-open"></i>
+                {{ rota.titulo }}
             </router-link>
           </li>
       </ul>
