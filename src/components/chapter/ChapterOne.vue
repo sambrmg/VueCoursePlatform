@@ -105,6 +105,8 @@ export default {
   components: {
     'quiz': Quiz
   }
+
+  
 }
 </script>
 <style></style>

@@ -2,15 +2,15 @@
     <div class="quiz">
         <slot></slot>
         <ol class="answer">
-            <li>Answer 1</li>
-            <li>Answer 2</li>
-            <li>Answer 3</li>
+            <li v-for="answer in answers">
+                {{ answer }}
+            </li>
         </ol>
     </div>
 </template>
 <script>
 export default {
-  
+  props: ['answers']
 }
 </script>
 <style >
