@@ -118,9 +118,17 @@ export default {
   },
   data(){
 	  return {
-		  answers : ['answer 1','answer 2','answer 3']
+		   
+			  answers : { 
+				  'answer 1': true,
+				  'answer 2': false,
+				  'answer 3' : false
+				}
+		  
 	  }
+	  
   }
+  
 }
 </script>
 <style></style>
