@@ -1,12 +1,23 @@
-## Plataform to create courses
+## Course Platform
 
 
-## Instalation
-`clone https://github.com/sambrmg/plataforma.git`
+## Installation
+
+`clone https://github.com/sambrmg/VueCoursePlatform.git`
+
+`cd VueCoursePlatform/`
 
 `npm install`
 
 `npm run dev`
+
+## How it works
+
+`Create Chapter in /src/components/chapter/
+
+One file per page, example:
+
+ChapterOne.vue`
 
 ## License
 [MIT]
