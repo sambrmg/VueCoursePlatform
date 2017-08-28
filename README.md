@@ -3,21 +3,25 @@
 
 ## Installation
 
-`clone https://github.com/sambrmg/VueCoursePlatform.git`
+```
+clone https://github.com/sambrmg/VueCoursePlatform.git
 
-`cd VueCoursePlatform/`
+cd VueCoursePlatform/
 
-`npm install`
+npm install
 
-`npm run dev`
+npm run dev
+```
 
 ## How it works
 
-`Create Chapter in /src/components/chapter/
+```
+Create Chapter in /src/components/chapter/
 
 One file per page, example:
 
-ChapterOne.vue`
+ChapterOne.vue
+```
 
 ## License
 [MIT]
