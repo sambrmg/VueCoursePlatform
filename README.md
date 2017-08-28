@@ -22,7 +22,7 @@ npm run dev
 
 One file per page, example:
 
-`ChapterOne.vue` (you can put any name to file)
+`ChapterOne.vue` (You can give any name to the file)
 In this file you put structure default of Vue file.
 
 
