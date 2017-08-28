@@ -13,9 +13,9 @@ npm install
 npm run dev
 ```
 
-## How it works
+## How to use
 
-```jsx
+```
 **Create a new chapter file:**
 
 /src/components/chapter/
@@ -24,7 +24,9 @@ One file per page, example:
 
 ChapterOne.vue (you can put any name to file)
 In this file you put structure default of Vue file.
+```
 
+```html
 <template>
 
 Here you can put HTML tags (p, blockquote, b, h1, h2, h3, h4, h5, h6, ...)
@@ -36,11 +38,15 @@ Here you can put HTML tags (p, blockquote, b, h1, h2, h3, h4, h5, h6, ...)
 
 <style>
 </style>
+```
 
+```
 **After created chapter:**
 
 Open /src/routes.js and add import and path 
+```
 
+```javascript
 import ChapterOne from './components/chapter/ChapterOne.vue';
 import ChapterTwo from './components/chapter/ChapterTwo.vue';
 
