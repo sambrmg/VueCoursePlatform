@@ -6,6 +6,7 @@
                 <span v-on:click="isCorrect(res,$event)">
                     {{ answer }}
                 </span>
+                <div></div>
             </li>
         </ol>
     </div>
@@ -38,38 +39,63 @@ export default {
         box-sizing: border-box;
         border: 1px solid #ededed;
     }
+
     .answer{
         list-style: none;
-        margin: 0;
+        margin: 35px 0 0 0;
         padding: 0;
     }
-    .answer li.isCorrect:before {
-        background-color: #62e879;    
+
+    .answer li.isCorrect:before{
+        background-color: #279a3b; 
     }
+
+    .answer li.isCorrect {
+        border-color: #279a3b; 
+    }
+
     .answer li.incorrect:before {
-        background-color: #f76969;    
+        background-color: #e26e6e; 
     }
+
+    .answer li.incorrect {
+        border-color: #e26e6e; 
+    }
+
+    .answer li.incorrect > span, .answer li.isCorrect > span{
+        border-bottom: 0px; 
+    }
+
     .answer li {
-        border: 2px solid #dedede;
         margin-bottom: 10px;
         counter-increment: index;
-        position: relative;	
-        color: #757575;	
-        cursor: pointer;	
+        position: relative; 
+        color: #757575; 
     }
+
     .answer li span{
         padding: 20px 10px 20px 60px;
         display: block;
+        cursor: pointer;
+        border: 2px solid #dedede;
     }
+
     .answer li:before {
         content: counter(index,upper-latin);
         position: absolute;
-        top: -2px;
-        left: -2px;
-        bottom: -2px;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
         padding: 16px 15px 10px 15px;
         background-color: #74a8e3;
         color: white;
         font-size: 28px;
+    }
+
+    .answer li > div{
+        padding: 10px 60px;
+        border-bottom: 2px solid #dedede;
+        border-right: 2px solid #dedede;
+
     }
 </style>
