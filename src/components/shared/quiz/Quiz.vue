@@ -6,7 +6,10 @@
                 <span v-on:click="isCorrect(res,$event)">
                     {{ answer }}
                 </span>
-                <div></div>
+                <div>
+                    <div class="answer-box">
+                    </div>
+                </div>
             </li>
         </ol>
     </div>
@@ -93,9 +96,13 @@ export default {
     }
 
     .answer li > div{
-        padding: 10px 60px;
+        padding: 10px 30px 10px 60px;
         border-bottom: 2px solid #dedede;
         border-right: 2px solid #dedede;
 
+    }
+    .answer li > div .answer-box {
+        border: 1px solid #ccc;
+        padding: 20px;
     }
 </style>
