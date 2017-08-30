@@ -99,7 +99,11 @@ export default {
         padding: 10px 30px 10px 60px;
         border-bottom: 2px solid #dedede;
         border-right: 2px solid #dedede;
+        display: none;
 
+    }
+    .answer li.incorrect > div, .answer li.isCorrect > div {
+        display: block;
     }
     .answer li > div .answer-box {
         border: 1px solid #ccc;
