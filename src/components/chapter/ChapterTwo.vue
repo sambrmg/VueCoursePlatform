@@ -120,9 +120,18 @@ export default {
 	  return {
 		   
 			  answers : { 
-				  'answer 1': true,
-				  'answer 2': false,
-				  'answer 3' : false
+				  'answer 1': { 
+				  	'response': true,
+					'explication': 'This answer is correct because XYZ'
+				  	},
+				  'answer 2': { 
+				  	'response': false,
+					'explication': 'This answer is correct because XYZ'
+				  	},
+				  'answer 3': { 
+				  	'response': false,
+					'explication': 'This answer is correct because XYZ'
+				   },
 				}
 		  
 	  }
