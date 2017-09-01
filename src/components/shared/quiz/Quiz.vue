@@ -2,12 +2,13 @@
     <div class="quiz">
         <slot></slot>
         <ol class="answer">
-            <li v-for="(res, answer) in answers" >
-                <span v-on:click="isCorrect(res,$event)">
-                    {{ answer }}
+            <li v-for="(value, index) in answers" >
+                <span v-on:click="isCorrect(value,$event)">
+                    {{ index }}
                 </span>
                 <div>
                     <div class="answer-box">
+                        {{ value.explication }}
                     </div>
                 </div>
             </li>
@@ -18,7 +19,7 @@
 export default {
   props: ['answers'],
   methods: {
-      isCorrect: function (res, event) {
+      isCorrect: function (value, event) {
           let getList = event.target.parentNode.parentNode;
           let getLi = event.target.parentNode;
 
@@ -26,7 +27,7 @@ export default {
               e.setAttribute("class","");
           })
           
-          if(res == true){
+          if(value.response == true){
             getLi.setAttribute("class","isCorrect");
           }else{
             getLi.setAttribute("class","incorrect");
