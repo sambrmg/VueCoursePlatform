@@ -18,25 +18,38 @@
 <script>
 export default {
   props: ['answers'],
+  data() {
+      return{
+          clicked: false
+      }
+    
+  },
   methods: {
+      showAnswers: function(){
+          console.log(this.answers)
+      },
       isCorrect: function (value, event) {
+          this.showAnswers()
           let getList = event.target.parentNode.parentNode;
           let getLi = event.target.parentNode;
-
-          getList.childNodes.forEach( function(e){
+          if(!this.clicked){
+            getList.childNodes.forEach( function(e){
               e.setAttribute("class","");
-          })
-          
-          if(value.response == true){
-            getLi.setAttribute("class","isCorrect");
-          }else{
-            getLi.setAttribute("class","incorrect");
+            })
+            
+            if(value.response == true){
+                getLi.setAttribute("class","isCorrect");
+            }else{
+                getLi.setAttribute("class","incorrect");
+            }
+            this.clicked = true
           }
+          
       }
   }
 }
 </script>
-<style >
+<style>
     .quiz{
         padding: 40px;
         background-color: #fbfbfb;
@@ -97,7 +110,7 @@ export default {
     }
 
     .answer li > div{
-        padding: 10px 30px 10px 60px;
+        padding: 10px 15px 10px 60px;
         border-bottom: 2px solid #dedede;
         border-right: 2px solid #dedede;
         display: none;
