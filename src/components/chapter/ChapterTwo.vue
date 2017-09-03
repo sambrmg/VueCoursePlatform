@@ -106,7 +106,7 @@ div.identificador2 p b {
 		 	<p>
 		 		O exemplo acima mostra que somente o <code>&lt;b&gt;</code> dentro da <code>&lt;div&gt;</code> que receberá as regas, como a declaração está assim <code>div.identificador2 p b</code> 'div.identificador2' sem espaço entre eles significa que somente a classe identificador2 que estiver em uma DIV que atenderá as regras.
 			</p>
-      <quiz :answers="answers">
+      <quiz :answers="answers" :oneAnswerOnly="true">
 		  <p>O que é uma variável?</p>
 	  </quiz>
   </div>

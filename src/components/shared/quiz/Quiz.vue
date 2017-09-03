@@ -17,32 +17,39 @@
 </template>
 <script>
 export default {
-  props: ['answers'],
+  props: ['answers', 'oneAnswerOnly'],
   data() {
       return{
-          clicked: false
+          clicked: false,
+          oneAnswerOnly: false
       }
     
   },
   methods: {
-      showAnswers: function(){
-          console.log(this.answers)
+      showAnswers: function(value, event){
+        let getLi = event.target.parentNode;
+        let getList = event.target.parentNode.parentNode;
+        
+        getList.childNodes.forEach( function(e){
+            e.setAttribute("class","");
+        })
+
+        if(value.response == true){
+            getLi.setAttribute("class","isCorrect");
+        }else{
+            getLi.setAttribute("class","incorrect");
+        }
+        
       },
       isCorrect: function (value, event) {
-          this.showAnswers()
-          let getList = event.target.parentNode.parentNode;
-          let getLi = event.target.parentNode;
-          if(!this.clicked){
-            getList.childNodes.forEach( function(e){
-              e.setAttribute("class","");
-            })
-            
-            if(value.response == true){
-                getLi.setAttribute("class","isCorrect");
-            }else{
-                getLi.setAttribute("class","incorrect");
+          
+          if(this.oneAnswerOnly){
+            if(!this.clicked){
+                this.showAnswers(value, event);
+                this.clicked = true
             }
-            this.clicked = true
+          }else{
+              this.showAnswers(value, event);
           }
           
       }
