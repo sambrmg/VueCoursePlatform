@@ -40,6 +40,36 @@ Here you can put HTML tags (p, blockquote, b, h1, h2, h3, h4, h5, h6, ...)
 </style>
 ```
 
+**Quiz component:**
+
+```html
+<quiz :answers="answers" :oneAnswerOnly="true">
+  <p>Question XYZ?</p>
+</quiz>
+```
+:oneAnswerOnly (true/false) -> to lock answer after click default is false.
+
+:answers (object)
+Example:
+
+```html
+answers : { 
+  'answer 1': { 
+    'response': true,
+    'explication': 'This answer is correct because XYZ'
+    },
+  'answer 2': { 
+    'response': false,
+    'explication': 'This answer is correct because XYZ'
+    },
+  'answer 3': { 
+    'response': false,
+    'explication': 'This answer is correct because XYZ'
+   },
+}
+```
+
+
 
 **After created chapter:**
 
