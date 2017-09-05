@@ -47,12 +47,12 @@ Here you can put HTML tags (p, blockquote, b, h1, h2, h3, h4, h5, h6, ...)
   <p>Question XYZ?</p>
 </quiz>
 ```
-:oneAnswerOnly (true/false) -> to lock answer after click default is false.
+:oneAnswerOnly (true/false) -> to lock answer after click, default is false.
 
 :answers (object)
 Example:
 
-```html
+```js
 answers : { 
   'answer 1': { 
     'response': true,
