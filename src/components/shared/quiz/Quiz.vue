@@ -18,31 +18,30 @@
 <script>
 export default {
   props: ['answers', 'oneAnswerOnly'],
-  data() {
+  
+  data: function() {
       return{
           clicked: false,
           oneAnswerOnly: false
       }
-    
   },
   methods: {
       showAnswers: function(value, event){
         let getLi = event.target.parentNode;
-        let getList = event.target.parentNode.parentNode;
+        let getUl = getLi.parentNode;
         
-        getList.childNodes.forEach( function(e){
+        getUl.childNodes.forEach( function(e){
             e.setAttribute("class","");
-        })
+        });
 
         if(value.response == true){
             getLi.setAttribute("class","isCorrect");
         }else{
             getLi.setAttribute("class","incorrect");
         }
-        
       },
+
       isCorrect: function (value, event) {
-          
           if(this.oneAnswerOnly){
             if(!this.clicked){
                 this.showAnswers(value, event);
@@ -63,7 +62,9 @@ export default {
         box-sizing: border-box;
         border: 1px solid #ededed;
     }
-
+    .quiz p{
+        margin: 0px; 
+    }
     .answer{
         list-style: none;
         margin: 35px 0 0 0;
