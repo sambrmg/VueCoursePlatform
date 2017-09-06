@@ -88,4 +88,5 @@ export const routes = [
 ```
 
 ## License
-[MIT]
+[https://github.com/sambrmg/VueCoursePlatform/blob/master/LICENSE](MIT)
+
