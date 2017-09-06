@@ -21,59 +21,12 @@ code {
     font-weight: bold;
 }
 
-nav{
-    width: 260px;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    z-index: 99;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: #383e4b;
-    color: black;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-}
-nav ul li a i{
-    margin-right: 10px;
-    color: white;
-    font-size: 17px;
-    position: relative;
-    top: 3px;
-}
-
-
-nav ul li a i.done{
-    color: #90db73;
-}
-
-nav ul li a{
-    padding: 15px 10px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-}
-nav ul li a.completed:after {
-    font-family: "simple-line-icons";
-    content: "\e080";
-    font-weight: bold;
-    color: #34d434;
-    margin-left: 10px;
-}
-nav ul li a:hover{
-    background-color: #22262e;
-}
 pre{
     background-color: #484848;
     color: white;
     padding: 20px;
 }
+
 .content{
     position: relative;
     left: 260px;
@@ -83,6 +36,7 @@ pre{
     border-top: 0px;
     padding: 10px 50px;
 }
+
 .clearfix{
     clear: both;
 }
