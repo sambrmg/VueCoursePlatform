@@ -69,7 +69,11 @@ nav ul li a.completed:after {
 nav ul li a:hover{
     background-color: #22262e;
 }
-
+pre{
+    background-color: #484848;
+    color: white;
+    padding: 20px;
+}
 .content{
     position: relative;
     left: 260px;
