@@ -25,6 +25,7 @@ pre{
     background-color: #484848;
     color: white;
     padding: 20px;
+    overflow-x: auto;
 }
 
 .content{
@@ -39,4 +40,28 @@ pre{
 
 .clearfix{
     clear: both;
+}
+
+@media screen and (max-width: 800px) {
+    div.content{
+        left: 0px;
+        width: 100%;
+        padding: 10px 20px;
+    }
+    nav.main-nav{
+        display: none;
+    }
+    section.quiz {
+        padding: 20px;
+    }
+    .quiz .answer li::before {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .quiz .answer li span {
+        padding: 15px 10px 15px 44px;
+    }
+    .quiz .answer {
+        margin: 18px 0 0 0;
+    }
 }

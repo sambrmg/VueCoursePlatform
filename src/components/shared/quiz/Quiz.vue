@@ -1,5 +1,5 @@
 <template>
-    <div class="quiz">
+    <section class="quiz">
         <slot></slot>
         <ol class="answer">
             <li v-for="(value, index) in answers" >
@@ -13,7 +13,7 @@
                 </div>
             </li>
         </ol>
-    </div>
+    </section>
 </template>
 <script>
 export default {
