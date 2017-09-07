@@ -73,4 +73,20 @@ export default {
     background-color: #22262e;
 }
 
+@media screen and (max-width: 800px) {
+
+    nav.main-nav{
+        width: 0%;
+    }
+    nav.main-nav::before{
+        content: 'Menu';
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background-color: #484848;
+        color: white;
+        padding: 10px;
+    }
+}
+
 </style>

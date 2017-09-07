@@ -131,4 +131,20 @@ export default {
         border: 1px solid #ccc;
         padding: 20px;
     }
+
+    @media screen and (max-width: 800px) {
+        section.quiz {
+            padding: 20px;
+        }
+        .quiz .answer li::before {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .quiz .answer li span {
+            padding: 15px 10px 15px 44px;
+        }
+        .quiz .answer {
+            margin: 18px 0 0 0;
+        }
+    }
 </style>
