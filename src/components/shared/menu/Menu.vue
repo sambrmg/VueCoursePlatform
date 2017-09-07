@@ -1,10 +1,10 @@
 <template>
     <nav class="main-nav">
       <ul>       
-          <li v-for="rota in rotas">
-            <router-link :to="rota.path ? rota.path : '/'">
+          <li v-for="route in routes">
+            <router-link :to="route.path ? route.path : '/'">
                 <i class="icon-book-open"></i>
-                {{ rota.title }}
+                {{ route.title }}
             </router-link>
           </li>
       </ul>
@@ -15,7 +15,7 @@
 
 export default {
     props: {
-        rotas: {
+        routes: {
             type: Array,
             required: true
         }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main-menu :rotas="routes"/>
+    <main-menu :routes="routes"/>
     <router-view class="content"></router-view>
   </div>
 </template>
