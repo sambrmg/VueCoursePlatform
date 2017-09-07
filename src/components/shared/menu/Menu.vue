@@ -1,13 +1,16 @@
 <template>
     <nav class="main-nav">
-      <ul>       
-          <li v-for="route in routes">
-            <router-link :to="route.path ? route.path : '/'">
-                <i class="icon-book-open"></i>
-                {{ route.title }}
-            </router-link>
-          </li>
-      </ul>
+        <div class="main-nav-mobile" v-on:click="openMenu($event)">
+            <span>Menu</span>
+        </div>
+        <ul>       
+            <li v-for="route in routes">
+                <router-link :to="route.path ? route.path : '/'">
+                    <i class="icon-book-open"></i>
+                    {{ route.title }}
+                </router-link>
+            </li>
+        </ul>
     </nav>
 </template>
 
@@ -18,6 +21,11 @@ export default {
         routes: {
             type: Array,
             required: true
+        }
+    },
+    methods: {
+        openMenu: function ($event) {
+            console.log('a');
         }
     }
 }
@@ -37,7 +45,17 @@ export default {
     overflow-x: hidden;
     background-color: #383e4b;
     color: black;
+    transition: width 0.5s;
 }
+.main-nav-mobile{
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+    height: 100%;
+    box-sizing: border-box;
+}
+
 .main-nav ul {
     list-style: none;
     margin: 0;
@@ -74,18 +92,15 @@ export default {
 }
 
 @media screen and (max-width: 800px) {
-
-    nav.main-nav{
-        width: 0%;
+    nav.main-nav {
+        width: 54px;
     }
-    nav.main-nav::before{
-        content: 'Menu';
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        background-color: #484848;
-        color: white;
-        padding: 10px;
+    nav.main-nav ul{
+        display: none;
+    }
+    nav.main-nav .main-nav-mobile{
+        display: block;
+        
     }
 }
 
