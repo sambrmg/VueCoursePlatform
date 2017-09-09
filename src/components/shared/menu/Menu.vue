@@ -4,7 +4,7 @@
             <span>Menu</span>
         </div>
         <ul>       
-            <li v-for="route in routes">
+            <li v-for="route in routes" v-on:click="closeMenu($event)">
                 <router-link :to="route.path ? route.path : '/'">
                     <i class="icon-book-open"></i>
                     {{ route.title }}
@@ -27,8 +27,19 @@ export default {
         openMenu: function (event) {
             let element = event.target;
             let mainNav = event.target.parentNode;
+            let ul = event.target.nextSibling.nextSibling;
             element.setAttribute("class","main-nav-mobile hide");
             mainNav.setAttribute("class","main-nav main-nav-100");
+            ul.setAttribute("class","show");
+        },
+        closeMenu: function (event) {
+            let element = event.target;
+            let ul = element.parentNode.parentNode;
+            let mainNavMobile = ul.previousSibling.previousSibling;
+            let mainNav = element.parentNode.parentNode.parentNode;
+            mainNavMobile.setAttribute("class","main-nav-mobile");
+            mainNav.setAttribute("class","main-nav");
+            ul.setAttribute("class","");
         }
     }
 }
@@ -69,6 +80,9 @@ nav.main-nav .main-nav-mobile.hide{
     margin: 0;
     padding: 0;
 
+}
+nav.main-nav ul.show{
+    display: block;
 }
 .main-nav ul li a i{
     margin-right: 10px;
