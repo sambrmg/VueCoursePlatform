@@ -24,8 +24,11 @@ export default {
         }
     },
     methods: {
-        openMenu: function ($event) {
-            console.log('a');
+        openMenu: function (event) {
+            let element = event.target;
+            let mainNav = event.target.parentNode;
+            element.setAttribute("class","main-nav-mobile hide");
+            mainNav.setAttribute("class","main-nav main-nav-100");
         }
     }
 }
@@ -47,6 +50,9 @@ export default {
     color: black;
     transition: width 0.5s;
 }
+.main-nav.main-nav-100{
+    width: 100%;
+}
 .main-nav-mobile{
     display: none;
     padding: 5px;
@@ -55,7 +61,9 @@ export default {
     height: 100%;
     box-sizing: border-box;
 }
-
+nav.main-nav .main-nav-mobile.hide{
+    display: none;
+}
 .main-nav ul {
     list-style: none;
     margin: 0;
